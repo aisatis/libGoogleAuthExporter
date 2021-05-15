@@ -16,7 +16,7 @@ just include libGoogleAuthExporter.h
 
 
 # Test
-you can run TestGoogleAuthExporter with args.
+you can run TestGoogleAuthExporter which in binary folder (or you can compile it) with args.
 
 For example:
 
