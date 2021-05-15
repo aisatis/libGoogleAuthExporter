@@ -12,6 +12,10 @@
 #define LIBGOOGLEAUTHEXPORTER_API  
 #endif
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 //[ret] 0=ok,<0 = errcode
 //[szInput] input encrypt data with null terminated
 //[szOutput] output decrypt data with max [nLen] defined. if szOutput is NULL or len is not enough,only len will return.
@@ -19,6 +23,9 @@
 
 LIBGOOGLEAUTHEXPORTER_API int GAuthExporter_Decode(const char* szInput, char* szOutput, int* nLen);
 
+#ifdef __cplusplus
+}
+#endif
 
 #define ERR_UNKNOWN -1
 #define ERR_INVALID_ARGUMENT -2
