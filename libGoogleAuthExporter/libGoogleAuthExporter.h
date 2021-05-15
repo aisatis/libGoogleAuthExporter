@@ -24,6 +24,6 @@ LIBGOOGLEAUTHEXPORTER_API int GAuthExporter_Decode(const char* szInput, char* sz
 #define ERR_INVALID_ARGUMENT -2
 #define ERR_DECODEDBASE64_FAILED -10
 #define ERR_PARSEPROTOBUF_FAILED -11
-#define ERR_NO_OPT_PARAMS -11
+#define ERR_NO_OPT_PARAMS -12
 
 #endif // libGoogleAuthExporter_h__

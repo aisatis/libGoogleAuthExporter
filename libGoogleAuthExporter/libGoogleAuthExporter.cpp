@@ -10,7 +10,15 @@ LIBGOOGLEAUTHEXPORTER_API int GAuthExporter_Decode(const char* szInput, char* sz
 		return ERR_INVALID_ARGUMENT;
 
 //#step1:base64 decode input
-	std::vector<uint8_t> vecDecoded = cppcodec::base64_rfc4648::decode(szInput,strlen(szInput));
+	std::vector<uint8_t> vecDecoded;
+	try
+	{
+		vecDecoded = cppcodec::base64_rfc4648::decode(szInput, strlen(szInput));
+	}
+	catch (...)
+	{
+		return ERR_DECODEDBASE64_FAILED;
+	}
 	if (vecDecoded.size() <= 0)
 		return ERR_DECODEDBASE64_FAILED;
 //#step2:analyze protobuf
